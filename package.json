@@ -1,7 +1,7 @@
 {
-  "name": "strapi-plugin-react-editorjs",
-  "version": "0.0.0-development",
-  "description": "Plugin for Strapi Headless CMS, hiding the standard WYSIWYG editor and replacing it with Editor.js",
+  "name": "strapi-plugin-react-editorjs-extended-embed",
+  "version": "1.0.0",
+  "description": "Plugin for Strapi Headless CMS, hiding the standard WYSIWYG editor and replacing it with Editor.js with extended embed",
   "homepage": "https://market.strapi.io/plugins/strapi-plugin-react-editorjs",
   "strapi": {
     "icon": "plug",
@@ -44,21 +44,10 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "author": {
-    "name": "Matvey Melishev",
-    "email": "matvey@melishev.ru",
-    "url": "https://melishev.ru"
-  },
+  "author": "Matvey Melishev <matvey@melishev.ru> (https://melishev.ru)",
   "maintainers": [
-    {
-      "name": "Matvey Melishev",
-      "email": "matvey@melishev.ru",
-      "url": "https://melishev.ru"
-    },
-    {
-      "name": "Jason Skipper",
-      "url": "https://www.skipperinnovations.com"
-    }
+    "Matvey Melishev <matvey@melishev.ru> (https://melishev.ru)",
+    "Jason Skipper (https://www.skipperinnovations.com)"
   ],
   "engines": {
     "node": ">=10.16.0 <=16.x.x",
@@ -66,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/melishev/strapi-plugin-editor-js.git"
+    "url": "git+https://github.com/pavel-kirpikau/strapi-plugin-react-editorjs-embed-extended.git"
   },
   "bugs": {
     "url": "https://github.com/melishev/strapi-plugin-editor-js/issues"
@@ -77,5 +66,9 @@
     "editor-js",
     "wysiwyg"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "main": ".releaserc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
