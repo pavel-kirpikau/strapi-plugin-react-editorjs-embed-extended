@@ -26,6 +26,7 @@ const customTools = {
         vimeo: true,
         gfycat: true,
         imgur: true,
+        instagram: true,
         spotifyshow: {
           regex: /https?:\/\/open.spotify.com\/show\/(.+)/,
           embedUrl: 'https://open.spotify.com/embed/show/<%= remote_id %>',
@@ -54,7 +55,7 @@ const customTools = {
           embedUrl: 'https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/<%= remote_id %>&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
           html: "<iframe width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay'></iframe>",
           height: 300,
-          id: (groups) => groups.join('/embed/') 
+          id: (groups) => groups.join('/embed/')
         }
         }
       }
