@@ -32,7 +32,6 @@ const customTools = {
           embedUrl: 'https://open.spotify.com/embed/show/<%= remote_id %>',
           html: "<iframe style='border-radius:12px' border-width: '0px' width='100%' height='352' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>",
           height: 352,
-          width: 644,
           id: (groups) => groups.join('/embed/')
           },
         spotifyepisode: {
@@ -40,7 +39,6 @@ const customTools = {
           embedUrl: 'https://open.spotify.com/embed/episode/<%= remote_id %>',
           html: "<iframe style='border-radius:12px' border-width: '0px' width='100%' height='352' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>",
           height: 352,
-          width: 644,
           id: (groups) => groups.join('/embed/')  
         },
         mixcloudepisode: {
