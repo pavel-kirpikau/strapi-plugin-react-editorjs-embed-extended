@@ -19,7 +19,10 @@ const customTools = {
     class: Embed,
     config: {
       services: {
-        youtube: true,
+        youtube: {
+          enable: true,
+          width: '100%',        
+        },
         coub: true,
         facebook: true,
         twitter: true,
