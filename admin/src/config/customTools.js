@@ -19,10 +19,6 @@ const customTools = {
     class: Embed,
     config: {
       services: {
-        youtube: {
-          enable: true,
-          width: '100%',        
-        },
         coub: true,
         facebook: true,
         twitter: true,
@@ -56,6 +52,13 @@ const customTools = {
           embedUrl: 'https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/<%= remote_id %>&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
           html: "<iframe width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay'></iframe>",
           height: 300,
+          id: (groups) => groups.join('/embed/')
+        },
+        youtubefix: {
+          regex: /(?:https?:\/\/)?(?:www\.)?(?:(?:youtu\.be\/)|(?:youtube\.com)\/(?:v\/|u\/\w\/|embed\/|watch))(?:(?:\?v=)?([^#&?=]*))?((?:[?&]\w*=\w*)*)/,
+          embedUrl: 'https://www.youtube.com/embed/<%= remote_id %>',
+          html: '<iframe style="width:100%;" height="320" frameborder="0" allowfullscreen></iframe>',
+          height: 320,
           id: (groups) => groups.join('/embed/')
         }
         }
