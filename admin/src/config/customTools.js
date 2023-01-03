@@ -25,7 +25,7 @@ const customTools = {
         vimeo: true,
         gfycat: true,
         imgur: true,
-        instagram: true,
+        instagram: false,
         spotifyshow: {
           regex: /https?:\/\/open.spotify.com\/show\/(.+)/,
           embedUrl: 'https://open.spotify.com/embed/show/<%= remote_id %>',
@@ -60,9 +60,16 @@ const customTools = {
           html: '<iframe style="width:100%;" height="320" frameborder="0" allowfullscreen></iframe>',
           height: 320,
           id: (groups) => groups.join('/embed/')
-        }
-        }
+        },
+        instagramfix: {
+          regex: /https?:\/\/www\.instagram\.com\/p\/([^\/\?\&]+)\/?/,
+          embedUrl: 'https://www.instagram.com/p/<%= remote_id %>/embed',
+          html: '<iframe width="100%" height="505" style="margin: 0 auto;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>',
+          height: 505,
+          id: (groups) => groups.join('/embed/')
+        },
       }
+    }
     },
   table: {
     class: Table,
